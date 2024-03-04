@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 1 - Les fonctions</title>
+</head>
+<style>
+  #myDIV {
+    width: 100%;
+    text-align: center;
+  }
+</style>
+
+<body style="text-align: center;">
+  <h1>Exercice 1</h1>
+  <p>Créer un nombre entre 0 et 10, l'utilisateur à 3 essais pour deviner le nom.</p>
+  <p>On utilisera isRight() qui prend argument n et une fonction guess()
+    qui permet au joueur de deviner.</p>
+
+  <button onclick="hideAndShow()">Afficher la réponse</button>
+
+  <div id="myDIV" style="display: none; margin-top: 10px;">
+    <img src="/A.Les bases/05.Les fonctions/Exercices/exo1(fonctions).png" alt="exo1" />
+  </div>
+
+  <script>
+    function hideAndShow() {
+      let x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+
+  <br>
+
+  <button>
+    <a style="text-decoration: none; color: black;" href="/index.html">RETOUR</a>
+  </button>
+</body>
+
+</html>

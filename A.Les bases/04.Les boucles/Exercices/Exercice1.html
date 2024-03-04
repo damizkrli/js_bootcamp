@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1 - Les boucles</title>
+</head>
+
+<style>
+    #myDIV {
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
+<body style="text-align: center;">
+    <h1>Exercice 1</h1>
+    <p>
+        Demander 1 chiffre entre 0 et 10, sinon afficher erreur, si oui afficher
+        tous les en dessous et les afficher
+    </p>
+
+    <button onclick="hideAndShow()">Afficher la réponse</button>
+
+    <div id="myDIV" style="display: none;">
+        <img src="exo1(boucles).png" alt="exo1" />
+    </div>
+
+    <script>
+        function hideAndShow() {
+            let x = document.getElementById("myDIV")
+            if (x.style.display === "none") {
+                x.style.display = "block"
+            } else {
+                x.style.display = "none"
+            }
+        }
+    </script>
+
+<br>
+
+    <button>
+        <a style="text-decoration: none; color: black;" href="/index.html">RETOUR</a>
+    </button>
+</body>
+
+</html>

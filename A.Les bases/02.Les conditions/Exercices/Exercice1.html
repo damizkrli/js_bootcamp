@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices 1 - Les conditions</title>
+</head>
+
+<style>
+    #myDIV {
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
+<body style="text-align: center;">
+    <h1>Exercice 1</h1>
+    <hr>
+    <p>3 Films : Lilo et Stich / Matrix / Evil Dead</p>
+    <p>créer un système de recommandation basé sur l'age de l'utilisateur</p>
+    <p>si l'utilisateur à :</p>
+    <p>13 et moins on lui conseille Lilo et Stich</p>
+    <p>entre 13 et 18 ans on lui conseille Matrix</p>
+    <p>18 ans et plus on lui conseille Evil Dead</p>
+    <p>pour demander l'age à l'utilisateur on utilisera 
+        <code style="background-color: black; color: yellow; border-radius: 5px; padding: 3px;">
+            prompt('')
+        </code>
+    </p>
+
+    <button onclick="hideAndShow()">Afficher la réponse</button>
+
+    <div id="myDIV" style="display: none;">
+        <img src="Exercice1.png" alt="exo1" />
+    </div>
+    
+    <script>
+        function hideAndShow() {
+            let x = document.getElementById("myDIV")
+            if (x.style.display === "none") {
+                x.style.display = "block"
+            } else {
+                x.style.display = "none"
+            }
+        }
+    </script>
+
+    <br>
+    
+    <button>
+        <a style="text-decoration: none; color: black;" href="/index.html">RETOUR</a>
+    </button>
+
+</html>

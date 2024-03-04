@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2 - Les fonctions</title>
+</head>
+<style>
+    #myDIV {
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
+<body style="text-align: center;">
+    <h1>Exercice 2</h1>
+    <p>
+        L'objectif de cet exercice est de dire si un nombre est premier ou non. Pour rappel, un nombre premier est un nombre qui est divisible par
+        1 ou par lui même.
+    </p>
+
+    <button onclick="hideAndShow()">Afficher la réponse</button>
+
+    <div id="myDIV" style="display: none; margin-top: 10px;">
+        <img src="exo2(fonctions).png" alt="exo2" />
+    </div>
+
+    <script>
+        function hideAndShow() {
+            let x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+    <br>
+
+    <button>
+        <a style="text-decoration: none; color: black;" href="/index.html">RETOUR</a>
+    </button>
+</body>
+
+</html>
