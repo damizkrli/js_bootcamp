@@ -62,55 +62,13 @@
 
         <br>
 
-        <!-- Mettre la réponse ici sous forme d'image exoNUM(CHAPITRE).png -->
         <script>
-            class Livre {
 
-                #page = 1
+            // VOTRE RÉPONSE ICI
 
-                constructor(titre, pages) {
-                    this.titre = titre
-                    this.pages = pages
-                }
-
-                get page() {
-                    return this.#page
-                }
-
-                nextPage() {
-                    if (this.#page < this.pages) {
-                        this.#page++
-                    }
-                }
-
-                close() {
-                    this.#page = 1
-                }
-
-            }
-
-            class Library {
-                
-                #books = []
-
-                addBook(book) {
-                    this.#books.push(book)
-                }
-
-                addBooks(books) {
-                    books.forEach(this.addBook, this) // ATTENTION C'EST forEach
-                }
-
-                findBooksByLetter(letter) {
-                    return this.#books.filter((livre) => livre.title[0].toLowerCase() === letter.toLowerCase())
-
-                }
-
-            }
-
-            const shining = new Livre('Shining', '300')
-            console.log(shining) // titre : Shining, pages 300 OK
-            console.log(shining.page) // 1 OK
+            const shining = new Book('Shining', '300')
+            console.log(shining) 
+            console.log(shining.page) 
             shining.nextPage()
             console.log(shining.page)
             shining.nextPage()
@@ -119,21 +77,23 @@
             console.log(shining.page)
 
             const l = new Library()
-            console.log(l) // pas de livre dans l
-            l.addBook(shining) // ajout de shining dans l avec addBook
-            console.log(l) // shining dans l
+            console.log(l) 
+            l.addBook(shining) 
+            console.log(l) 
             l.addBooks([
-                new Livre('Ready Player One', 100),
-                new Livre('Le cercle des poètes disparu'),
-                new Livre('Coder Proprement'),
+                new Book('Ready Player One', 100),
+                new Book('Le cercle des poètes disparu'),
+                new Book('Coder Proprement'),
+                new Book('Carrie'),
             ])
-            console.log(l.findBooksByLetter('C'))
-
+            const firstLetterIsC = l.findBooksByLetter('C')
+            console.log(firstLetterIsC)
 
         </script>
 
+        <!-- Mettre la réponse ici sous forme d'image exoNUM(CHAPITRE).png -->
         <div id="myDIV" style="display: none; margin-top: 10px;">
-            <img src="#" alt="exo2" />
+            <img src="exo2(classes).png" alt="exo2" />
         </div>
 
         <script>
