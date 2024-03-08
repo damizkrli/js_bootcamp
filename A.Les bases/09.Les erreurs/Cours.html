@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Erreurs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+    #myDIV {
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <h1>Les erreurs</h1>
+
+        <p>Les erreurs font parti des objets et comme les objets classiques, ils ont un prototype. De ce fait ils ont
+            également des méthodes, des propriétés... .</p>
+
+        <img src="erreur.png" alt="erreur">
+        <p>Matérialisation d'une erreur dans un script PHP </p>
+
+        <br>
+
+        <img src="console.png" alt="console">
+        <p><i>Retour de la console</i></p>
+
+        <p>Automatiquement le reste du script ne sera pas exécuté.</p>
+
+        <p>Parfois on aura besoin de capturer une erreur</p>
+        <img src="captureErreur.png" alt="captureErreur">
+
+        <br>
+
+        <img class="mt-5" src="console(2).png" alt="console">
+        <p><i>Retour de la console</i></p>
+
+        <img class="mt-5" src="trycatch.png" alt="tryCatch">
+        <p>Mise en application</p>
+
+        <img src="console(4).png" alt="console(3)" class="mt-5">
+        <p><i>Retour de la console</i></p>
+
+        <img src="console(3).png" alt="console(3)" class="mt-5">
+        <p><i>Retour de la console</i></p>
+
+        <p>Dans certains cas, il est plus intéressant de faire un <strong>re-throw</strong> c'est à dire d'envoyer une
+            erreur différente et plus significative par rapport contexte. Il est également possible d'ajouter un second
+            paramètre : <strong>la cause</strong>. L'idée est de mettre un code dans la cause (url, code d'erreur...).Le
+            problème des erreurs en Javascript c'est qu'elles ne contienne pas beaucoup
+            d'informations</p>
+
+        <img src="promptRectangle.png" alt="promptRectangle">
+        <p>Permet de donner une erreur plus précise à l'utilisateur</p>
+
+        <img src="console(5).png" alt="console">
+        <p><i>Retour de la console</i></p>
+
+        <p><strong><i>Conseil :</i></strong></p>
+        <p>L'utilisation des Erreurs restent plutôt classique dans le Javascript. Dès que l'on crée une fonction si des
+            paramètres amènent la fonction à ne pas marcher dans ce cas il faut les prendre en compte et faire un
+            <code>throw new</code> manuel. De plus renvoyer une erreur le plus tôt possible dans le code, permet
+            d'éviter les effets de bords qui peuvent survenir plus tard et qu'il est plus difficile d'appréhender par la
+            suite. Ensuite, à vous de juger si une erreur est à capturer ou non : si aucune solution n'est envisageable
+            pour appréhender l'erreur, le <code>throw new</code> est ce qu'il y a de mieux afin d'arrêter complètement
+            le script. A l'inverse, si certaines choses peuvent être gérable ou des solutions de secours, alors dans ce
+            cas là on peut utiliser le <code>try ... catch</code> pour capturer l'erreur et faire quelque chose en
+            fonction. Il est très simple, mais on peut y ajouter des condition pour attraper des erreurs pour réagir de
+            la meilleure des façon en fonction du type d'erreur rencontré.</p>
+        <script>
+            class Rectangle {
+
+                constructor(longueur, hauteur) {
+                    if (longueur <= 0 || hauteur <= 0) {
+                        throw new Error("Impossible d'avoir des dimensions négatives.")
+                    }
+
+                    this.longueur = longueur
+                    this.hauteur = hauteur
+                }
+
+                get perimeter() {
+                    return (this.longueur + this.hauteur) * 2
+                }
+
+                // périmètre non négatif
+                isValid() {
+                    this.longueur > 0 && this.hauteur > 0
+                }
+
+
+                isBiggerThan(shape) {
+                    return this.perimeter > shape.perimeter
+                }
+
+            }
+
+            function promptRectangle() {
+                try {
+                    // const width = parseInt(prompt('Largeur'), 10)
+                    // const height = parseInt(prompt('Largeur'), 10)
+                    const r = new Rectangle(width, height)
+                    console.log(r.perimeter)
+                } catch (error) {
+                    throw new Error("Entrée utilisateur invalide")
+                }
+            }
+
+
+            try {
+                promptRectangle()
+            } catch (e) {
+                console.log(e.message, { e })
+            }
+
+        </script>
+
+        <br>
+
+        <button class="mt-5 mb-5 btn btn-success">
+            <a style="text-decoration: none; color: black;" href="/index.html">RETOUR</a>
+        </button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
