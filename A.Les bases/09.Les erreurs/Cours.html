@@ -13,6 +13,13 @@
         width: 100%;
         text-align: center;
     }
+
+    code {
+        background-color: black;
+        color: yellow;
+        padding: 7px;
+        border-radius: 5px;
+    }
 </style>
 
 <body>
@@ -67,10 +74,11 @@
             paramètres amènent la fonction à ne pas marcher dans ce cas il faut les prendre en compte et faire un
             <code>throw new</code> manuel. De plus renvoyer une erreur le plus tôt possible dans le code, permet
             d'éviter les effets de bords qui peuvent survenir plus tard et qu'il est plus difficile d'appréhender par la
-            suite. Ensuite, à vous de juger si une erreur est à capturer ou non : si aucune solution n'est envisageable
+            suite. </p>
+            <p>Ensuite, à vous de juger si une erreur est à capturer ou non : si aucune solution n'est envisageable
             pour appréhender l'erreur, le <code>throw new</code> est ce qu'il y a de mieux afin d'arrêter complètement
             le script. A l'inverse, si certaines choses peuvent être gérable ou des solutions de secours, alors dans ce
-            cas là on peut utiliser le <code>try ... catch</code> pour capturer l'erreur et faire quelque chose en
+            cas là on peut utiliser le <code>try {} ... catch () {}</code> pour capturer l'erreur et faire quelque chose en
             fonction. Il est très simple, mais on peut y ajouter des condition pour attraper des erreurs pour réagir de
             la meilleure des façon en fonction du type d'erreur rencontré.</p>
         <script>
