@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les fonctions usuelles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+    #myDIV {
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
+<script>
+    const notes = [12, 6, 4, 11]
+    const initialValue = 0
+    const sumWithInitialValue = notes.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        initialValue
+    )
+
+    console.log(sumWithInitialValue / notes.length)
+</script>
+
+<body>
+    <div class="container">
+        <h1>Les fonctions usuelles</h1>
+
+        <h2>Les tableaux</h2>
+        <hr>
+
+        <h3>AT()</h3>
+        <p>Accepte des index négatif.</p>
+
+        <h3>CONCAT()</h3>
+        <p>Fusionne deux tableaux</p>
+
+        <h3>FILL()</h3>
+        <p>Rempli un tableau avec une valeur spécifique</p>
+
+        <h3>FILTER()</h3>
+        <p>Filtre les valeurs en une seule fois. Elle prend un paramètre : une fonction (true ou false). Elle permet de
+            créer un nouveau tableau de valeur. Cette fonction de comparaison peut être plus ou moins complexe suivant
+            les
+            situtations.</p>
+
+        <h3>FIND() & FININDEX()</h3>
+        <p>Retourne l'index d'un tableau</p>
+
+        <h3>FINDLAST() & FINDLASTINDEX()</h3>
+        <p>Retourne le dernier index d'un tableau</p>
+
+        <h3>FLAT()</h3>
+        <p>Converti un tableau qui contient d'autres tableaux en un tableau aplatit. Utilisation spécifique.</p>
+
+        <h3>FOREACH()</h3>
+        <p>Permet de parcourir un tableau. Reçoit à la fois la valeur et l'index.</p>
+
+        <h3>FROM()</h3>
+        <p>Permet de créer un tableau à partir d'un élément. Similaire à MAP</p>
+
+        <h3>INCLUDES()</h3>
+        <p>Permet de vérifier si une valeur est inclue dans un tableau. </p>
+
+        <h3>INDEXOF()</h3>
+        <p>Renvoie l'index. Antérieur à INCLUDES</p>
+
+        <h3>JOIN()</h3>
+        <p>Associe différents éléments.</p>
+
+        <h3>MAP()</h3>
+        <p>Transforme un tableau avec application d'une fonction de transformation (multiplie chaque élément d'un
+            tableau
+            par un nombre déterminé).</p>
+        <img src="MAP.png" alt="MAP">
+
+        <h3>POP()</h3>
+        <p>Retire le dernier élément d'un tableau. Affecte le tableau original.</p>
+
+        <h3>PUSH()</h3>
+        <p>Ajoute un élément dans uin tableau.</p>
+
+        <h3>REDUCE()</h3>
+        <p>Permet de faire la somme des éléments d'un tableau.</p>
+        <img src="REDUCE.png" alt="reduce">
+
+        <h3>SLICE()</h3>
+        <p>Permet récupérer une partie du tableau et renvoie les éléments restant. Une valeur négative commence par la
+            droite. En créant une slice() on crée un nouveau tableau.</p>
+
+        <h3>UNSHIFT()</h3>
+        <p>Insère des données au début du tableau.</p>
+
+        <h2>Les Objets</h2>
+
+        <h3>ASSIGNE()</h3>
+        <p>Permet d'assigner des propriété d'un objet à un autre objet. Cela crée un nouvel objet.</p>
+
+        <h3>FREEZE()</h3>
+        <p>Permet de geler un objet pour ne plus le modifier.</p>
+
+        <h3>KEYS()</h3>
+        <p>Retourne un tableau de toutes les clés</p>
+
+        <h3>VALUES()</h3>
+        <p>Retourne un tableau de toutes les valeurs</p>
+
+        <h2>Les fonctions</h2>
+
+        <h3>BIND()</h3>
+        <p>Permet de créer une nouvelle fonction à partir d'une fonction en changeant le contexte de <i>this</i>. Cela
+            permet d'ancrer la valeur et ainsi elle ne sera plus modifiable.</p>
+
+        <h3>APPLY()</h3>
+        <p>Appelle une méthode en lui passant la valeur de <i>this</i> et un tableau qui correspond aux différents éléments.</p>
+
+        <h3>CALL()</h3>
+        <p>Fait la même chose que APPLY() mais permet de mettre les arguments les uns derrières les autres.</p>
+
+        <br>
+
+        <button class="btn btn-success btn-lg mt-5 mb-5">
+            <a style="text-decoration: none; color: black;" href="/index.html">RETOUR</a>
+        </button>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+</body>
+</div>
+
+</html>
